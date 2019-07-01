@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ConsumeWebApi.Models.MonedasViewModel>
+
+@{
+    ViewBag.Title = "Catálogo Monedas";
+}
+
+<h2>Catálogo Monedas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MonedaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TextoImpteLetra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Simbolo)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonedaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TextoImpteLetra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Simbolo)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.MonedaID })
+        </td>
+    </tr>
+}
+
+</table>

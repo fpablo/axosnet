@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dal">
+  <DataContextMoniker Name="/dalDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d55db085-4160-492f-936f-beea8cf8676a" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dalDataContext/Doctos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="746c3d1d-2508-45e3-9690-8adeef6a22a6" absoluteBounds="3.5149999999999997, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="845f64b5-c022-4319-9d34-c5424e4af00c" absoluteBounds="0.75, 5.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dalDataContext/Monedas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2586f211-e337-4349-8c06-8b56a1eb9247" absoluteBounds="0.76499999999999968, 5.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.23159912109375); (4.5 : 6.23159912109375); (4.5 : 3.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dalDataContext/Monedas/Monedas_Doctos" />
+      <nodes>
+        <classShapeMoniker Id="845f64b5-c022-4319-9d34-c5424e4af00c" />
+        <classShapeMoniker Id="d55db085-4160-492f-936f-beea8cf8676a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c842c7ca-d02a-4c47-b605-587e90387c74" absoluteBounds="0.75, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dalDataContext/Proveedores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba4a065d-473a-4e52-b460-c8a9149d4ba0" absoluteBounds="0.76499999999999968, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.16429768880208); (3.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dalDataContext/Proveedores/Proveedores_Doctos" />
+      <nodes>
+        <classShapeMoniker Id="c842c7ca-d02a-4c47-b605-587e90387c74" />
+        <classShapeMoniker Id="d55db085-4160-492f-936f-beea8cf8676a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

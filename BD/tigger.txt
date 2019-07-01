@@ -1,0 +1,45 @@
+USE [axosnet]
+GO
+
+
+CREATE TRIGGER [dbo].[Trigger_Date] ON [dbo].[Doctos] FOR INSERT AS BEGIN
+
+Declare @Id int
+set @Id = (select DoctoID from inserted)
+
+Update [dbo].[Doctos]
+Set Fecha = GetDate(),FechaHoraCreacion=  GetDate(), FechaHoraModificacion=GetDate()
+Where DoctoID = @Id
+END
+--------------------------------------
+
+USE [axosnet]
+GO
+
+
+CREATE TRIGGER [dbo].[Trigger_Date_Moneda] ON [dbo].[Monedas] FOR INSERT AS BEGIN
+
+Declare @Id int
+set @Id = (select MonedaID from inserted)
+
+Update [dbo].[Monedas]
+Set FechaHoraCreacion=  GetDate(), FechaHoraModificacion=GetDate()
+Where MonedaID = @Id
+END
+
+
+--------------------------------------
+
+USE [axosnet]
+GO
+
+
+CREATE TRIGGER [dbo].[Trigger_Date_Proveedor] ON [dbo].[Proveedores] FOR INSERT AS BEGIN
+
+Declare @Id int
+set @Id = (select ProveedorID from inserted)
+
+Update [dbo].[Proveedores]
+Set FechaHoraCreacion=  GetDate(), FechaHoraModificacion=GetDate()
+Where ProveedorID = @Id
+END

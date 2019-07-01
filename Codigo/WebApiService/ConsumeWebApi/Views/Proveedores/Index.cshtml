@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ConsumeWebApi.Models.ProveedoresViewModels>
+
+@{
+    ViewBag.Title = "Catálogo Proveedor";
+}
+
+<h2>Catálogo Proveedor</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+    
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+    </tr>
+}
+
+</table>

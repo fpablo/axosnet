@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ConsumeWebApi.Models.DoctosViewModels>
+
+@{
+    ViewBag.Title = "Catálogo Recibo";
+}
+
+<h2>Catálogo Recibo</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctoID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ProveedorNombre)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.MonedaNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentario)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctoID)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.ProveedorNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonedaNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comentario)
+        </td>
+    </tr>
+}
+
+</table>
